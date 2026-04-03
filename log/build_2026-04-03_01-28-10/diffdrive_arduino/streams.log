@@ -1,0 +1,77 @@
+[0.034s] Invoking command in '/workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspaces/jazzy_docker/new_pcb_robot/src/diffdrive_arduino -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino
+[0.501s] -- The CXX compiler identification is GNU 13.3.0
+[0.567s] -- Detecting CXX compiler ABI info
+[0.759s] -- Detecting CXX compiler ABI info - done
+[0.770s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.770s] -- Detecting CXX compile features
+[0.771s] -- Detecting CXX compile features - done
+[0.820s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.068s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.206s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.459s] -- Found hardware_interface: 4.35.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[1.730s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.793s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.893s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.978s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.712s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[2.815s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[2.823s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.869s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[2.971s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.976s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[3.004s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[3.008s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[3.024s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[3.040s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.788s] -- Found ament_cmake_gtest: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_gtest/cmake)
+[3.931s] -- Configuring done (3.9s)
+[4.065s] -- Generating done (0.1s)
+[4.070s] -- Build files have been written to: /workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino
+[4.089s] Invoked command in '/workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspaces/jazzy_docker/new_pcb_robot/src/diffdrive_arduino -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino
+[4.090s] Invoking command in '/workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino -- -j16 -l16
+[4.183s] [ 50%] [32mBuilding CXX object CMakeFiles/diffdrive_arduino.dir/hardware/diffbot_system.cpp.o[0m
+[10.497s] [100%] [32m[1mLinking CXX shared library libdiffdrive_arduino.so[0m
+[11.317s] [100%] Built target diffdrive_arduino
+[11.333s] Invoked command in '/workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino -- -j16 -l16
+[11.335s] Invoking command in '/workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino
+[11.345s] -- Install configuration: ""
+[11.346s] -- Execute custom install script
+[11.346s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino//diffdrive_arduino.xml
+[11.359s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/arduino_comms.hpp
+[11.372s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/diffbot_system.hpp
+[11.384s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/visibility_control.h
+[11.399s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/wheel.hpp
+[11.416s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/launch/view_robot.launch.py
+[11.430s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/ros2_control/diffbot.ros2_control.xacro
+[11.443s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/urdf/diffbot.materials.xacro
+[11.455s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/urdf/diffbot.urdf.xacro
+[11.469s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/urdf/diffbot_description.urdf.xacro
+[11.481s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/rviz/diffbot.rviz
+[11.496s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/rviz/diffbot_view.rviz
+[11.512s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/launch/diffbot.launch.py
+[11.525s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/config/diffbot_controllers.yaml
+[11.539s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/environment/library_path.sh
+[11.552s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/environment/library_path.dsv
+[11.565s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/ament_index/resource_index/package_run_dependencies/diffdrive_arduino
+[11.578s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/ament_index/resource_index/parent_prefix_path/diffdrive_arduino
+[11.591s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/environment/ament_prefix_path.sh
+[11.607s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/environment/ament_prefix_path.dsv
+[11.621s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/environment/path.sh
+[11.634s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/environment/path.dsv
+[11.646s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.bash
+[11.660s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.sh
+[11.675s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.zsh
+[11.687s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.dsv
+[11.700s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/package.dsv
+[11.716s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/ament_index/resource_index/packages/diffdrive_arduino
+[11.729s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/diffdrive_arduino
+[11.742s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/cmake/ament_cmake_export_targets-extras.cmake
+[11.756s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/cmake/ament_cmake_export_dependencies-extras.cmake
+[11.768s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/cmake/diffdrive_arduinoConfig.cmake
+[11.783s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/cmake/diffdrive_arduinoConfig-version.cmake
+[11.797s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/package.xml
+[11.814s] -- Installing: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/lib/libdiffdrive_arduino.so
+[11.816s] -- Set non-toolchain portion of runtime path of "/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/lib/libdiffdrive_arduino.so" to ""
+[11.816s] -- Installing: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/cmake/export_diffdrive_arduinoExport.cmake
+[11.817s] -- Installing: /workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/cmake/export_diffdrive_arduinoExport-noconfig.cmake
+[11.820s] Invoked command in '/workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino

@@ -1,0 +1,1 @@
+/workspaces/jazzy_docker/new_pcb_robot/build/autonomous_robot/ament_cmake_environment_hooks/local_setup.bash

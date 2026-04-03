@@ -1,0 +1,349 @@
+[0.679s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.679s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x70a0107b7200>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x70a0109175f0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x70a0109175f0>>, mixin_verb=('build',))
+[0.935s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.935s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.935s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.935s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.935s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.936s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.936s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/workspaces/jazzy_docker/new_pcb_robot'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_robot) by extensions ['ignore', 'ignore_ament_install']
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_robot) by extension 'ignore'
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_robot) by extension 'ignore_ament_install'
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_robot) by extensions ['colcon_pkg']
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_robot) by extension 'colcon_pkg'
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_robot) by extensions ['colcon_meta']
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_robot) by extension 'colcon_meta'
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_robot) by extensions ['ros']
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(src/autonomous_robot) by extension 'ros'
+[1.022s] DEBUG:colcon.colcon_core.package_identification:Package 'src/autonomous_robot' with type 'ros.ament_cmake' and name 'autonomous_robot'
+[1.023s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extensions ['ignore', 'ignore_ament_install']
+[1.023s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extension 'ignore'
+[1.023s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extension 'ignore_ament_install'
+[1.023s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extensions ['colcon_pkg']
+[1.023s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extension 'colcon_pkg'
+[1.023s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extensions ['colcon_meta']
+[1.023s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extension 'colcon_meta'
+[1.023s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extensions ['ros']
+[1.023s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extension 'ros'
+[1.024s] DEBUG:colcon.colcon_core.package_identification:Package 'src/diffdrive_arduino' with type 'ros.ament_cmake' and name 'diffdrive_arduino'
+[1.024s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_description) by extensions ['ignore', 'ignore_ament_install']
+[1.024s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_description) by extension 'ignore'
+[1.024s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_description) by extension 'ignore_ament_install'
+[1.024s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_description) by extensions ['colcon_pkg']
+[1.024s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_description) by extension 'colcon_pkg'
+[1.024s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_description) by extensions ['colcon_meta']
+[1.024s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_description) by extension 'colcon_meta'
+[1.024s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_description) by extensions ['ros']
+[1.024s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_description) by extension 'ros'
+[1.025s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pan_tilt_description' with type 'ros.ament_python' and name 'pan_tilt_description'
+[1.025s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_hardware) by extensions ['ignore', 'ignore_ament_install']
+[1.025s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_hardware) by extension 'ignore'
+[1.025s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_hardware) by extension 'ignore_ament_install'
+[1.025s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_hardware) by extensions ['colcon_pkg']
+[1.025s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_hardware) by extension 'colcon_pkg'
+[1.025s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_hardware) by extensions ['colcon_meta']
+[1.025s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_hardware) by extension 'colcon_meta'
+[1.025s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_hardware) by extensions ['ros']
+[1.025s] Level 1:colcon.colcon_core.package_identification:_identify(src/pan_tilt_hardware) by extension 'ros'
+[1.026s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pan_tilt_hardware' with type 'ros.ament_cmake' and name 'pan_tilt_hardware'
+[1.026s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.026s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.026s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.026s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.026s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.104s] Level 5:colcon.colcon_core.verb:set package 'autonomous_robot' build argument 'cmake_args' from command line to 'None'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'autonomous_robot' build argument 'cmake_target' from command line to 'None'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'autonomous_robot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'autonomous_robot' build argument 'cmake_clean_cache' from command line to 'False'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'autonomous_robot' build argument 'cmake_clean_first' from command line to 'False'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'autonomous_robot' build argument 'cmake_force_configure' from command line to 'False'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'autonomous_robot' build argument 'ament_cmake_args' from command line to 'None'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'autonomous_robot' build argument 'catkin_cmake_args' from command line to 'None'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'autonomous_robot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.105s] DEBUG:colcon.colcon_core.verb:Building package 'autonomous_robot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/jazzy_docker/new_pcb_robot/build/autonomous_robot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot', 'merge_install': False, 'path': '/workspaces/jazzy_docker/new_pcb_robot/src/autonomous_robot', 'symlink_install': True, 'test_result_base': None}
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_args' from command line to 'None'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_target' from command line to 'None'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_clean_cache' from command line to 'False'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_clean_first' from command line to 'False'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_force_configure' from command line to 'False'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'ament_cmake_args' from command line to 'None'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'catkin_cmake_args' from command line to 'None'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.105s] DEBUG:colcon.colcon_core.verb:Building package 'diffdrive_arduino' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino', 'merge_install': False, 'path': '/workspaces/jazzy_docker/new_pcb_robot/src/diffdrive_arduino', 'symlink_install': True, 'test_result_base': None}
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_description' build argument 'cmake_args' from command line to 'None'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_description' build argument 'cmake_target' from command line to 'None'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_description' build argument 'cmake_clean_cache' from command line to 'False'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_description' build argument 'cmake_clean_first' from command line to 'False'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_description' build argument 'cmake_force_configure' from command line to 'False'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_description' build argument 'ament_cmake_args' from command line to 'None'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_description' build argument 'catkin_cmake_args' from command line to 'None'
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.105s] DEBUG:colcon.colcon_core.verb:Building package 'pan_tilt_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description', 'merge_install': False, 'path': '/workspaces/jazzy_docker/new_pcb_robot/src/pan_tilt_description', 'symlink_install': True, 'test_result_base': None}
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_hardware' build argument 'cmake_args' from command line to 'None'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_hardware' build argument 'cmake_target' from command line to 'None'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_hardware' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_hardware' build argument 'cmake_clean_cache' from command line to 'False'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_hardware' build argument 'cmake_clean_first' from command line to 'False'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_hardware' build argument 'cmake_force_configure' from command line to 'False'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_hardware' build argument 'ament_cmake_args' from command line to 'None'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_hardware' build argument 'catkin_cmake_args' from command line to 'None'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt_hardware' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.106s] DEBUG:colcon.colcon_core.verb:Building package 'pan_tilt_hardware' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware', 'merge_install': False, 'path': '/workspaces/jazzy_docker/new_pcb_robot/src/pan_tilt_hardware', 'symlink_install': True, 'test_result_base': None}
+[1.106s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.107s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.107s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/jazzy_docker/new_pcb_robot/src/autonomous_robot' with build type 'ament_cmake'
+[1.107s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/jazzy_docker/new_pcb_robot/src/autonomous_robot'
+[1.138s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.138s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.139s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.157s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/jazzy_docker/new_pcb_robot/src/diffdrive_arduino' with build type 'ament_cmake'
+[1.157s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/jazzy_docker/new_pcb_robot/src/diffdrive_arduino'
+[1.157s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.157s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.161s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/workspaces/jazzy_docker/new_pcb_robot/src/pan_tilt_description' with build type 'ament_python'
+[1.162s] Level 1:colcon.colcon_core.shell:create_environment_hook('pan_tilt_description', 'ament_prefix_path')
+[1.162s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/hook/ament_prefix_path.ps1'
+[1.166s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/hook/ament_prefix_path.dsv'
+[1.167s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/hook/ament_prefix_path.sh'
+[1.169s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.169s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.173s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/jazzy_docker/new_pcb_robot/src/pan_tilt_hardware' with build type 'ament_cmake'
+[1.173s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/jazzy_docker/new_pcb_robot/src/pan_tilt_hardware'
+[1.173s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.173s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.182s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/jazzy_docker/new_pcb_robot/build/autonomous_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspaces/jazzy_docker/new_pcb_robot/src/autonomous_robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot
+[1.192s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspaces/jazzy_docker/new_pcb_robot/src/diffdrive_arduino -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino
+[1.412s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/workspaces/jazzy_docker/new_pcb_robot/src/pan_tilt_description'
+[1.412s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.412s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.421s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspaces/jazzy_docker/new_pcb_robot/src/pan_tilt_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware
+[3.760s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description': PYTHONPATH=/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/build --no-deps symlink_data
+[4.480s] Level 1:colcon.colcon_core.shell:create_environment_hook('pan_tilt_description', 'pythonpath_develop')
+[4.481s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/share/pan_tilt_description/hook/pythonpath_develop.ps1'
+[4.481s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description' returned '0': PYTHONPATH=/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/build --no-deps symlink_data
+[4.484s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/share/pan_tilt_description/hook/pythonpath_develop.dsv'
+[4.485s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/share/pan_tilt_description/hook/pythonpath_develop.sh'
+[4.526s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description' for CMake module files
+[4.527s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description' for CMake config files
+[4.528s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/lib'
+[4.528s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/bin'
+[4.528s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/lib/pkgconfig/pan_tilt_description.pc'
+[4.528s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/lib/python3.12/site-packages'
+[4.529s] Level 1:colcon.colcon_core.shell:create_environment_hook('pan_tilt_description', 'pythonpath')
+[4.529s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/hook/pythonpath.ps1'
+[4.529s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/hook/pythonpath.dsv'
+[4.530s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/hook/pythonpath.sh'
+[4.530s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/bin'
+[4.530s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pan_tilt_description)
+[4.531s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/package.ps1'
+[4.533s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/package.dsv'
+[4.535s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/package.sh'
+[4.537s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/package.bash'
+[4.540s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/package.zsh'
+[4.544s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/colcon-core/packages/pan_tilt_description)
+[5.141s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/jazzy_docker/new_pcb_robot/build/autonomous_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspaces/jazzy_docker/new_pcb_robot/src/autonomous_robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot
+[5.143s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/jazzy_docker/new_pcb_robot/build/autonomous_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspaces/jazzy_docker/new_pcb_robot/build/autonomous_robot -- -j16 -l16
+[5.247s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspaces/jazzy_docker/new_pcb_robot/src/diffdrive_arduino -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino
+[5.247s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino -- -j16 -l16
+[5.256s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspaces/jazzy_docker/new_pcb_robot/src/pan_tilt_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware
+[5.257s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware -- -j16 -l16
+[5.695s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/jazzy_docker/new_pcb_robot/build/autonomous_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspaces/jazzy_docker/new_pcb_robot/build/autonomous_robot -- -j16 -l16
+[5.709s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/jazzy_docker/new_pcb_robot/build/autonomous_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspaces/jazzy_docker/new_pcb_robot/build/autonomous_robot
+[7.226s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(autonomous_robot)
+[7.227s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot' for CMake module files
+[7.227s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/jazzy_docker/new_pcb_robot/build/autonomous_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspaces/jazzy_docker/new_pcb_robot/build/autonomous_robot
+[7.228s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot' for CMake config files
+[7.229s] Level 1:colcon.colcon_core.shell:create_environment_hook('autonomous_robot', 'cmake_prefix_path')
+[7.229s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/hook/cmake_prefix_path.ps1'
+[7.229s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/hook/cmake_prefix_path.dsv'
+[7.230s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/hook/cmake_prefix_path.sh'
+[7.230s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/lib'
+[7.231s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/bin'
+[7.231s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/lib/pkgconfig/autonomous_robot.pc'
+[7.231s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/lib/python3.12/site-packages'
+[7.231s] Level 1:colcon.colcon_core.shell:create_environment_hook('autonomous_robot', 'pythonpath')
+[7.231s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/hook/pythonpath.ps1'
+[7.232s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/hook/pythonpath.dsv'
+[7.232s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/hook/pythonpath.sh'
+[7.233s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/bin'
+[7.233s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/package.ps1'
+[7.234s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/package.dsv'
+[7.234s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/package.sh'
+[7.235s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/package.bash'
+[7.235s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/package.zsh'
+[7.235s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/colcon-core/packages/autonomous_robot)
+[7.236s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(autonomous_robot)
+[7.236s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot' for CMake module files
+[7.237s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot' for CMake config files
+[7.237s] Level 1:colcon.colcon_core.shell:create_environment_hook('autonomous_robot', 'cmake_prefix_path')
+[7.238s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/hook/cmake_prefix_path.ps1'
+[7.238s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/hook/cmake_prefix_path.dsv'
+[7.239s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/hook/cmake_prefix_path.sh'
+[7.239s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/lib'
+[7.239s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/bin'
+[7.240s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/lib/pkgconfig/autonomous_robot.pc'
+[7.240s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/lib/python3.12/site-packages'
+[7.240s] Level 1:colcon.colcon_core.shell:create_environment_hook('autonomous_robot', 'pythonpath')
+[7.240s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/hook/pythonpath.ps1'
+[7.241s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/hook/pythonpath.dsv'
+[7.241s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/hook/pythonpath.sh'
+[7.242s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/bin'
+[7.242s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/package.ps1'
+[7.243s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/package.dsv'
+[7.243s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/package.sh'
+[7.243s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/package.bash'
+[7.244s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/autonomous_robot/package.zsh'
+[7.244s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/jazzy_docker/new_pcb_robot/install/autonomous_robot/share/colcon-core/packages/autonomous_robot)
+[12.478s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware -- -j16 -l16
+[12.479s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware
+[12.491s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino -- -j16 -l16
+[12.492s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino
+[12.903s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pan_tilt_hardware)
+[12.903s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware' for CMake module files
+[12.904s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware
+[12.904s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware' for CMake config files
+[12.905s] Level 1:colcon.colcon_core.shell:create_environment_hook('pan_tilt_hardware', 'cmake_prefix_path')
+[12.905s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/hook/cmake_prefix_path.ps1'
+[12.905s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/hook/cmake_prefix_path.dsv'
+[12.905s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/hook/cmake_prefix_path.sh'
+[12.906s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/lib'
+[12.906s] Level 1:colcon.colcon_core.shell:create_environment_hook('pan_tilt_hardware', 'ld_library_path_lib')
+[12.906s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/hook/ld_library_path_lib.ps1'
+[12.906s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/hook/ld_library_path_lib.dsv'
+[12.907s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/hook/ld_library_path_lib.sh'
+[12.907s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/bin'
+[12.907s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/lib/pkgconfig/pan_tilt_hardware.pc'
+[12.907s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/lib/python3.12/site-packages'
+[12.907s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/bin'
+[12.907s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/package.ps1'
+[12.908s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/package.dsv'
+[12.908s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/package.sh'
+[12.909s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/package.bash'
+[12.909s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/package.zsh'
+[12.909s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/colcon-core/packages/pan_tilt_hardware)
+[12.910s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pan_tilt_hardware)
+[12.910s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware' for CMake module files
+[12.910s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware' for CMake config files
+[12.911s] Level 1:colcon.colcon_core.shell:create_environment_hook('pan_tilt_hardware', 'cmake_prefix_path')
+[12.911s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/hook/cmake_prefix_path.ps1'
+[12.911s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/hook/cmake_prefix_path.dsv'
+[12.912s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/hook/cmake_prefix_path.sh'
+[12.912s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/lib'
+[12.912s] Level 1:colcon.colcon_core.shell:create_environment_hook('pan_tilt_hardware', 'ld_library_path_lib')
+[12.912s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/hook/ld_library_path_lib.ps1'
+[12.913s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/hook/ld_library_path_lib.dsv'
+[12.914s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/hook/ld_library_path_lib.sh'
+[12.914s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/bin'
+[12.914s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/lib/pkgconfig/pan_tilt_hardware.pc'
+[12.914s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/lib/python3.12/site-packages'
+[12.914s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/bin'
+[12.914s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/package.ps1'
+[12.915s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/package.dsv'
+[12.915s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/package.sh'
+[12.916s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/package.bash'
+[12.916s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/package.zsh'
+[12.916s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/colcon-core/packages/pan_tilt_hardware)
+[12.977s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diffdrive_arduino)
+[12.977s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino' for CMake module files
+[12.978s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspaces/jazzy_docker/new_pcb_robot/build/diffdrive_arduino
+[12.979s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino' for CMake config files
+[12.979s] Level 1:colcon.colcon_core.shell:create_environment_hook('diffdrive_arduino', 'cmake_prefix_path')
+[12.980s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.ps1'
+[12.981s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.dsv'
+[12.981s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.sh'
+[12.982s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/lib'
+[12.982s] Level 1:colcon.colcon_core.shell:create_environment_hook('diffdrive_arduino', 'ld_library_path_lib')
+[12.983s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.ps1'
+[12.983s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.dsv'
+[12.983s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.sh'
+[12.984s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/bin'
+[12.984s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/lib/pkgconfig/diffdrive_arduino.pc'
+[12.984s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/lib/python3.12/site-packages'
+[12.984s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/bin'
+[12.985s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/package.ps1'
+[12.986s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/package.dsv'
+[12.987s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/package.sh'
+[12.987s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/package.bash'
+[12.988s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/package.zsh'
+[12.988s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/colcon-core/packages/diffdrive_arduino)
+[12.989s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diffdrive_arduino)
+[12.989s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino' for CMake module files
+[12.990s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino' for CMake config files
+[12.991s] Level 1:colcon.colcon_core.shell:create_environment_hook('diffdrive_arduino', 'cmake_prefix_path')
+[12.991s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.ps1'
+[12.992s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.dsv'
+[12.993s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.sh'
+[12.994s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/lib'
+[12.994s] Level 1:colcon.colcon_core.shell:create_environment_hook('diffdrive_arduino', 'ld_library_path_lib')
+[12.995s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.ps1'
+[12.995s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.dsv'
+[12.996s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.sh'
+[12.996s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/bin'
+[12.997s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/lib/pkgconfig/diffdrive_arduino.pc'
+[12.997s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/lib/python3.12/site-packages'
+[12.997s] Level 1:colcon.colcon_core.environment:checking '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/bin'
+[12.998s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/package.ps1'
+[12.999s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/package.dsv'
+[13.000s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/package.sh'
+[13.000s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/package.bash'
+[13.001s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/diffdrive_arduino/package.zsh'
+[13.001s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/jazzy_docker/new_pcb_robot/install/diffdrive_arduino/share/colcon-core/packages/diffdrive_arduino)
+[13.001s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[13.002s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[13.002s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[13.002s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[13.044s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[13.044s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[13.044s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[13.049s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[13.050s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[13.050s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/jazzy_docker/new_pcb_robot/install/local_setup.ps1'
+[13.052s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/jazzy_docker/new_pcb_robot/install/_local_setup_util_ps1.py'
+[13.055s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/jazzy_docker/new_pcb_robot/install/setup.ps1'
+[13.057s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/jazzy_docker/new_pcb_robot/install/local_setup.sh'
+[13.059s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/jazzy_docker/new_pcb_robot/install/_local_setup_util_sh.py'
+[13.060s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/jazzy_docker/new_pcb_robot/install/setup.sh'
+[13.063s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/jazzy_docker/new_pcb_robot/install/local_setup.bash'
+[13.064s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/jazzy_docker/new_pcb_robot/install/setup.bash'
+[13.066s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/jazzy_docker/new_pcb_robot/install/local_setup.zsh'
+[13.068s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/jazzy_docker/new_pcb_robot/install/setup.zsh'

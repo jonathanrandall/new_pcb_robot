@@ -1,0 +1,97 @@
+[0.247s] Invoking command in '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspaces/jazzy_docker/new_pcb_robot/src/pan_tilt_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware
+[0.477s] -- The C compiler identification is GNU 13.3.0
+[0.551s] -- The CXX compiler identification is GNU 13.3.0
+[0.580s] -- Detecting C compiler ABI info
+[0.724s] -- Detecting C compiler ABI info - done
+[0.734s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.736s] -- Detecting C compile features
+[0.738s] -- Detecting C compile features - done
+[0.752s] -- Detecting CXX compiler ABI info
+[0.883s] -- Detecting CXX compiler ABI info - done
+[0.892s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.893s] -- Detecting CXX compile features
+[0.893s] -- Detecting CXX compile features - done
+[0.900s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.094s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.190s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.444s] -- Found hardware_interface: 4.35.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[1.715s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.778s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.877s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.962s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.695s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[2.799s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[2.807s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.853s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[2.952s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.957s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[2.989s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[2.994s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[3.006s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[3.021s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.766s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[3.954s] -- Added test 'copyright' to check source files copyright and LICENSE
+[3.957s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.958s] -- Configured cppcheck include dirs: /workspaces/jazzy_docker/new_pcb_robot/src/pan_tilt_hardware/include
+[3.958s] -- Configured cppcheck exclude dirs and/or files: 
+[3.960s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[3.961s] -- Configured cpplint exclude dirs and/or files: 
+[3.962s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.962s] -- Configured 'flake8' exclude dirs and/or files: 
+[3.963s] -- Added test 'lint_cmake' to check CMake code style
+[3.964s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[3.966s] -- Added test 'uncrustify' to check C / C++ code style
+[3.966s] -- Configured uncrustify additional arguments: 
+[3.967s] -- Added test 'xmllint' to check XML markup files
+[3.982s] -- Configuring done (3.7s)
+[4.048s] -- Generating done (0.0s)
+[4.054s] -- Build files have been written to: /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware
+[4.083s] Invoked command in '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspaces/jazzy_docker/new_pcb_robot/src/pan_tilt_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware
+[4.083s] Invoking command in '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware -- -j16 -l16
+[4.175s] [ 50%] [32mBuilding CXX object CMakeFiles/pan_tilt_hardware.dir/src/pan_tilt_hardware.cpp.o[0m
+[7.925s] [01m[K/workspaces/jazzy_docker/new_pcb_robot/src/pan_tilt_hardware/src/pan_tilt_hardware.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::CallbackReturn pan_tilt_hardware::PanTiltHardware::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’:
+[7.925s] [01m[K/workspaces/jazzy_docker/new_pcb_robot/src/pan_tilt_hardware/src/pan_tilt_hardware.cpp:113:49:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn hardware_interface::SystemInterface::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’ is deprecated: Use on_init(const HardwareComponentInterfaceParams & params) instead. [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[7.925s]   113 |     [01;35m[Khardware_interface::SystemInterface::on_init(info)[m[K !=
+[7.925s]       |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[7.925s] In file included from [01m[K/workspaces/jazzy_docker/new_pcb_robot/src/pan_tilt_hardware/include/pan_tilt_hardware/pan_tilt_hardware.hpp:11[m[K,
+[7.925s]                  from [01m[K/workspaces/jazzy_docker/new_pcb_robot/src/pan_tilt_hardware/src/pan_tilt_hardware.cpp:1[m[K:
+[7.925s] [01m[K/opt/ros/jazzy/include/hardware_interface/hardware_interface/system_interface.hpp:243:26:[m[K [01;36m[Knote: [m[Kdeclared here
+[7.925s]   243 |   virtual CallbackReturn [01;36m[Kon_init[m[K(const HardwareInfo & hardware_info)
+[7.925s]       |                          [01;36m[K^~~~~~~[m[K
+[10.491s] [100%] [32m[1mLinking CXX shared library libpan_tilt_hardware.so[0m
+[11.288s] [100%] Built target pan_tilt_hardware
+[11.304s] Invoked command in '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware -- -j16 -l16
+[11.305s] Invoking command in '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware
+[11.318s] -- Install configuration: ""
+[11.318s] -- Execute custom install script
+[11.318s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware//pan_tilt_hardware.xml
+[11.331s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/lib/libpan_tilt_hardware.so
+[11.343s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/include/pan_tilt_hardware/pan_tilt_hardware.hpp
+[11.356s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/launch/pan_tilt_control.launch.py
+[11.369s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/launch/pan_tilt_hardware_only.launch.py
+[11.384s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/config/pan_tilt_controllers.yaml
+[11.401s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/urdf/pan_tilt_control.urdf.xacro
+[11.414s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/urdf/pan_tilt_hardware_only.xacro
+[11.427s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/urdf/pan_tilt_standalone_pi.xacro
+[11.440s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/environment/library_path.sh
+[11.453s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/environment/library_path.dsv
+[11.466s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/ament_index/resource_index/package_run_dependencies/pan_tilt_hardware
+[11.482s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/ament_index/resource_index/parent_prefix_path/pan_tilt_hardware
+[11.497s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/environment/ament_prefix_path.sh
+[11.510s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/environment/ament_prefix_path.dsv
+[11.523s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/environment/path.sh
+[11.536s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/environment/path.dsv
+[11.549s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/local_setup.bash
+[11.562s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/local_setup.sh
+[11.576s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/local_setup.zsh
+[11.591s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/local_setup.dsv
+[11.605s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/package.dsv
+[11.618s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/ament_index/resource_index/packages/pan_tilt_hardware
+[11.631s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/pan_tilt_hardware
+[11.644s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/cmake/ament_cmake_export_include_directories-extras.cmake
+[11.659s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/cmake/ament_cmake_export_libraries-extras.cmake
+[11.671s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/cmake/ament_cmake_export_dependencies-extras.cmake
+[11.684s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/cmake/pan_tilt_hardwareConfig.cmake
+[11.700s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/cmake/pan_tilt_hardwareConfig-version.cmake
+[11.714s] -- Symlinking: /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_hardware/share/pan_tilt_hardware/package.xml
+[11.730s] Invoked command in '/workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_hardware

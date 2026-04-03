@@ -1,0 +1,46 @@
+running develop
+running egg_info
+creating pan_tilt_description.egg-info
+writing pan_tilt_description.egg-info/PKG-INFO
+writing dependency_links to pan_tilt_description.egg-info/dependency_links.txt
+writing entry points to pan_tilt_description.egg-info/entry_points.txt
+writing requirements to pan_tilt_description.egg-info/requires.txt
+writing top-level names to pan_tilt_description.egg-info/top_level.txt
+writing manifest file 'pan_tilt_description.egg-info/SOURCES.txt'
+reading manifest file 'pan_tilt_description.egg-info/SOURCES.txt'
+writing manifest file 'pan_tilt_description.egg-info/SOURCES.txt'
+running build_ext
+Creating /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/lib/python3.12/site-packages/pan-tilt-description.egg-link (link to .)
+Installing pan_tilt_teleop script to /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/lib/pan_tilt_description
+
+Installed /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description
+running symlink_data
+creating /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/ament_index
+creating /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/ament_index/resource_index
+creating /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/ament_index/resource_index/packages
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/resource/pan_tilt_description -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/ament_index/resource_index/packages
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/package.xml -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description
+creating /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/launch
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/launch/pan_tilt_gazebo.launch.py -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/launch
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/launch/pan_tilt.joy.launch.py -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/launch
+creating /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/urdf
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/urdf/ros2_control_gazebo.xacro -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/urdf
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/urdf/ros2_control_pan_tilt.xacro -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/urdf
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/urdf/pan_tilt_standalone.xacro -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/urdf
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/urdf/pan_tilt.xacro -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/urdf
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/urdf/pan_tilt_test.xacro -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/urdf
+creating /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/config
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/config/pan_tilt_controllers.yaml -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/config
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/config/pan_tilt_teleop.yaml -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/config
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/config/gaz_ros2_ctl_use_sim.yaml -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/config
+creating /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/urdf/meshes
+creating /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/urdf/meshes/stls
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/urdf/meshes/stls/PAN-TILT_BASE_V1_fixed.stl -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/urdf/meshes/stls
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/urdf/meshes/stls/PAN-TILT_ROTOR_V2_fixed.stl -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/urdf/meshes/stls
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/urdf/meshes/stls/PAN-TILT_LEG_V2.stl -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/urdf/meshes/stls
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/urdf/meshes/stls/PAN-TILT_ROTOR_V2.stl -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/urdf/meshes/stls
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/urdf/meshes/stls/pi_stand_final_v2-Body_v2.stl -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/urdf/meshes/stls
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/urdf/meshes/stls/PAN-TILT_LEG_V2_fixed.stl -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/urdf/meshes/stls
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/urdf/meshes/stls/pi_stand_final_v2-Body_v2_fixed.stl -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/urdf/meshes/stls
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/urdf/meshes/stls/PAN-TILT_BASE_V1.stl -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/urdf/meshes/stls
+symbolically linking /workspaces/jazzy_docker/new_pcb_robot/build/pan_tilt_description/urdf/meshes/stls/PAN-TILT_BASE_V1_fixed.dae -> /workspaces/jazzy_docker/new_pcb_robot/install/pan_tilt_description/share/pan_tilt_description/urdf/meshes/stls
