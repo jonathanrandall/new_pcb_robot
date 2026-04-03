@@ -1,1 +1,0 @@
-/workspaces/jazzy_docker/new_pcb_robot/src/diffdrive_arduino/description/launch/view_robot.launch.py

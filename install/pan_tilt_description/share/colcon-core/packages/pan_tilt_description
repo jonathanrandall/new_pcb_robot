@@ -1,1 +1,0 @@
-controller_manager:forward_command_controller:gz_ros2_control:joint_state_broadcaster:joy:rclpy:robot_state_publisher:ros2_control:ros_gz_sim:sensor_msgs:std_msgs:xacro
