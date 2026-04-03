@@ -219,12 +219,12 @@ Your hardware interface must support all of these simultaneously.
 
 You MUST implement support for these joints:
 
-1. left_wheel_joint
+1. left_front_wheel_joint, left_rear_wheel_joint
 
    * command: velocity
    * state: position, velocity
 
-2. right_wheel_joint
+2. right_wheel_joint, right_rear_wheel_joint
 
    * command: velocity
    * state: position, velocity
@@ -247,11 +247,11 @@ Use a SIMPLE TEXT-BASED protocol (for debugging):
 
 ### PC → ESP32 (joint control)
 
-CMD,left_vel,right_vel,pan_pos,tilt_pos\n
+CMD,left_front_vel, left_rear_vel,right_front_vel, right_rear_vel,pan_pos,tilt_pos\n
 
 ### ESP32 → PC (state feedback)
 
-STATE,left_pos,right_pos,left_vel,right_vel,pan_pos,tilt_pos\n
+STATE,left_front_pos, left_rear_pos,right_front_pos, right_rear_pos,left_front_vel, left_rear_vel,right_front_vel, right_rear_vel,pan_pos,tilt_pos\n
 
 ### PC → ESP32 (auxiliary commands from buttons)
 

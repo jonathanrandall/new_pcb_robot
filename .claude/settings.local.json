@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(ros2 topic echo:*)",
-      "Bash(ros2 param get:*)"
+      "Bash(ros2 param get:*)",
+      "Bash(tree:*)",
+      "Bash(colcon build:*)"
     ],
     "deny": [],
     "ask": []
