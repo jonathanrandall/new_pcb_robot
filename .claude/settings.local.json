@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ros2 topic echo:*)",
+      "Bash(ros2 param get:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
