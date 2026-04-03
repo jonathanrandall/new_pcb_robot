@@ -1,0 +1,439 @@
+You are an expert ROS 2 (Jazzy) developer specializing in ros2_control and embedded systems integration.
+
+I need you to generate a COMPLETE, production-quality ROS 2 hardware interface plugin that communicates with a single ESP32 over a serial port and exposes BOTH diff drive and pan-tilt joints in ONE combined SystemInterface.
+
+This is critical: DO NOT split this into multiple hardware interfaces. It must be a SINGLE combined hardware interface that owns the serial connection.
+
+---
+
+## SYSTEM OVERVIEW
+
+Hardware:
+
+* One ESP32 connected over USB serial (e.g. /dev/ttyUSB0)
+* ESP32 controls:
+
+  * 2 DC motors (diff drive with encoders)
+  * 2 servos (pan + tilt)
+
+ROS side:
+
+* We will run:
+
+  * diff_drive_controller (for wheels)
+  * a position controller for pan/tilt
+  * joint_state_broadcaster
+
+Your hardware interface must support all of these simultaneously.
+
+---
+
+## JOINT DEFINITIONS
+
+You MUST implement support for these joints:
+
+1. left_wheel_joint
+
+   * command: velocity
+   * state: position, velocity
+
+2. right_wheel_joint
+
+   * command: velocity
+   * state: position, velocity
+
+3. pan_joint
+
+   * command: position
+   * state: position
+
+4. tilt_joint
+
+   * command: position
+   * state: position
+
+---
+
+## SERIAL PROTOCOL (MANDATORY)
+
+Use a SIMPLE TEXT-BASED protocol (for debugging):
+
+### PC → ESP32
+
+CMD,left_vel,right_vel,pan_pos,tilt_pos\n
+
+### ESP32 → PC
+
+STATE,left_pos,right_pos,left_vel,right_vel,pan_pos,tilt_pos\n
+
+All values are floats.
+
+---
+
+## REQUIREMENTS
+
+You must:
+
+1. Implement a class derived from:
+   hardware_interface::SystemInterface
+
+2. Implement ALL required lifecycle methods:
+
+   * on_init
+   * export_state_interfaces
+   * export_command_interfaces
+   * on_configure
+   * on_activate
+   * on_deactivate
+   * read
+   * write
+
+3. Use proper ROS 2 Jazzy APIs (no ROS1, no deprecated APIs)
+
+4. Use pluginlib export macro correctly
+
+5. Use POSIX serial (termios) for communication (NOT boost, NOT fake code)
+
+6. Implement:
+
+   * serial open (/dev/ttyUSB0, configurable via parameter)
+   * baud rate (parameter)
+   * non-blocking or timeout-safe read
+   * line-based parsing
+
+7. Maintain internal vectors:
+
+   * positions
+   * velocities
+   * commands (velocity + position appropriately handled)
+
+8. Correctly map:
+
+   * velocity commands → wheels
+   * position commands → pan/tilt
+
+9. Handle mixed interface types properly:
+
+   * wheels use velocity command interface
+   * pan/tilt use position command interface
+
+10. Make the code realistic and compilable (no pseudo-code)
+
+---
+
+## OUTPUT FORMAT (VERY IMPORTANT)
+
+You MUST output everything as ONE COMPLETE project in a SINGLE response.
+
+Use this exact structure:
+
+1. package.xml
+2. CMakeLists.txt
+3. include/<package_name>/esp32_combined_hardware.hpp
+4. src/esp32_combined_hardware.cpp
+5. plugin.xml
+6. example ros2_control URDF block
+
+DO NOT OMIT ANY FILES.
+
+DO NOT SUMMARIZE.
+
+DO NOT EXPLAIN UNLESS NECESSARY.
+
+---
+
+## CODING QUALITY
+
+* Use clean, modern C++
+* Use std::vector, std::string, etc.
+* Include proper error handling for serial
+* Use clear naming
+* No placeholder comments like "implement this later"
+* Everything must be coherent and connected
+
+---
+
+## ADDITIONAL NOTES
+
+* Assume ROS 2 Jazzy on Ubuntu 24.04
+* Assume the plugin will be built with colcon
+* Use correct dependencies:
+
+  * hardware_interface
+  * pluginlib
+  * rclcpp
+  * rclcpp_lifecycle
+
+---
+
+## GOAL
+
+At the end, I should be able to:
+
+* colcon build
+* load this hardware interface via ros2_control
+* connect to an ESP32 over serial
+* run diff_drive_controller + pan/tilt controller simultaneously
+
+---
+
+Now generate the FULL implementation.
+
+
+######### PROMPT 2###########################
+
+
+You are an expert ROS 2 (Jazzy) developer specializing in ros2_control and embedded systems integration.
+
+I need you to generate a COMPLETE, production-quality ROS 2 hardware interface plugin that communicates with a single ESP32 over a serial port and exposes BOTH diff drive and pan-tilt joints in ONE combined SystemInterface.
+
+This is critical: DO NOT split this into multiple hardware interfaces. It must be a SINGLE combined hardware interface that owns the serial connection.
+
+---
+
+## SYSTEM OVERVIEW
+
+Hardware:
+
+* One ESP32 connected over USB serial (e.g. /dev/ttyUSB0)
+* ESP32 controls:
+
+  * 2 DC motors (diff drive with encoders)
+  * 2 servos (pan + tilt)
+  * accepts auxiliary commands (e.g. button-triggered actions)
+
+ROS side:
+
+* We will run:
+
+  * diff_drive_controller (for wheels)
+  * a position controller for pan/tilt
+  * joint_state_broadcaster
+  * a custom node that converts joystick button presses into auxiliary commands
+
+Your hardware interface must support all of these simultaneously.
+
+---
+
+## JOINT DEFINITIONS
+
+You MUST implement support for these joints:
+
+1. left_wheel_joint
+
+   * command: velocity
+   * state: position, velocity
+
+2. right_wheel_joint
+
+   * command: velocity
+   * state: position, velocity
+
+3. pan_joint
+
+   * command: position
+   * state: position
+
+4. tilt_joint
+
+   * command: position
+   * state: position
+
+---
+
+## SERIAL PROTOCOL (MANDATORY)
+
+Use a SIMPLE TEXT-BASED protocol (for debugging):
+
+### PC → ESP32 (joint control)
+
+CMD,left_vel,right_vel,pan_pos,tilt_pos\n
+
+### ESP32 → PC (state feedback)
+
+STATE,left_pos,right_pos,left_vel,right_vel,pan_pos,tilt_pos\n
+
+### PC → ESP32 (auxiliary commands from buttons)
+
+AUX,command_name,arg\n
+
+Examples:
+AUX,center_pan_tilt,0\n
+AUX,toggle_led,1\n
+AUX,estop,1\n
+
+All numeric values are floats unless otherwise noted.
+
+---
+
+## AUXILIARY COMMAND SUPPORT (VERY IMPORTANT)
+
+You MUST implement support for auxiliary commands:
+
+1. The hardware interface must subscribe to a ROS topic:
+   /esp32_aux_cmd
+
+2. Use a simple message type:
+   std_msgs/msg/String
+
+3. The message content will be:
+   "command_name,arg"
+
+Example:
+"toggle_led,1"
+"center_pan_tilt,0"
+
+4. The hardware interface must:
+
+   * store the latest auxiliary command
+   * send it to the ESP32 using the AUX serial format
+   * ensure it is sent ONCE (not continuously spammed)
+
+5. You must implement proper thread-safe handling of this command.
+
+---
+
+## REQUIRED ADDITIONAL ROS NODE
+
+You MUST ALSO generate a second node:
+
+### joy_button_bridge node
+
+This node must:
+
+1. Subscribe to:
+   /joy (sensor_msgs/msg/Joy)
+
+2. Detect button PRESS EVENTS (rising edge: 0 → 1)
+
+3. Map buttons to commands:
+
+Example mapping (implement exactly this):
+
+* Button 0 (A) → "center_pan_tilt,0"
+* Button 1 (B) → "toggle_led,1"
+* Button 2 (X) → "estop,1"
+* Button 3 (Y) → "beep,1"
+
+4. Publish to:
+   /esp32_aux_cmd (std_msgs/msg/String)
+
+5. Prevent repeated triggers while button is held
+
+---
+
+## REQUIREMENTS
+
+You must:
+
+1. Implement a class derived from:
+   hardware_interface::SystemInterface
+
+2. Implement ALL required lifecycle methods:
+
+   * on_init
+   * export_state_interfaces
+   * export_command_interfaces
+   * on_configure
+   * on_activate
+   * on_deactivate
+   * read
+   * write
+
+3. Use proper ROS 2 Jazzy APIs (no ROS1, no deprecated APIs)
+
+4. Use pluginlib export macro correctly
+
+5. Use POSIX serial (termios) for communication (NOT boost, NOT fake code)
+
+6. Implement:
+
+   * serial open (/dev/ttyUSB0, configurable via parameter)
+   * baud rate (parameter)
+   * non-blocking or timeout-safe read
+   * line-based parsing
+
+7. Maintain internal vectors:
+
+   * positions
+   * velocities
+   * commands (velocity + position appropriately handled)
+
+8. Correctly map:
+
+   * velocity commands → wheels
+   * position commands → pan/tilt
+
+9. Handle mixed interface types properly:
+
+   * wheels use velocity command interface
+   * pan/tilt use position command interface
+
+10. Make the code realistic and compilable (no pseudo-code)
+
+---
+
+## OUTPUT FORMAT (VERY IMPORTANT)
+
+You MUST output everything as ONE COMPLETE project in a SINGLE response.
+
+Use this exact structure:
+
+1. package.xml
+2. CMakeLists.txt
+3. include/<package_name>/esp32_combined_hardware.hpp
+4. src/esp32_combined_hardware.cpp
+5. src/joy_button_bridge.cpp
+6. plugin.xml
+7. example ros2_control URDF block
+8. example launch file
+
+DO NOT OMIT ANY FILES.
+
+DO NOT SUMMARIZE.
+
+DO NOT EXPLAIN UNLESS NECESSARY.
+
+---
+
+## CODING QUALITY
+
+* Use clean, modern C++
+* Use std::vector, std::string, etc.
+* Include proper error handling for serial
+* Use clear naming
+* No placeholder comments like "implement this later"
+* Everything must be coherent and connected
+
+---
+
+## ADDITIONAL NOTES
+
+* Assume ROS 2 Jazzy on Ubuntu 24.04
+* Assume the plugin will be built with colcon
+* Use correct dependencies:
+
+  * hardware_interface
+  * pluginlib
+  * rclcpp
+  * rclcpp_lifecycle
+  * std_msgs
+  * sensor_msgs
+
+---
+
+## GOAL
+
+At the end, I should be able to:
+
+* colcon build
+* load this hardware interface via ros2_control
+* connect to an ESP32 over serial
+* run diff_drive_controller + pan/tilt controller simultaneously
+* press joystick buttons and trigger auxiliary ESP32 actions
+
+---
+
+Now generate the FULL implementation.
+
+
