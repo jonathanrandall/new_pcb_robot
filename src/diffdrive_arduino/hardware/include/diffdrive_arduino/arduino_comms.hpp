@@ -149,7 +149,7 @@ public:
   {
     std::stringstream ss;
     ss << "m_" << vel_cms[0] << "_" << vel_cms[1] << "_" << vel_cms[2] << "_" << vel_cms[3] << "_\r";
-    std::cout << "Setting motor values to: " << ss.str() << std::endl;
+    // std::cout << "Setting motor values to: " << ss.str() << std::endl;
     send_msg(ss.str());
   }
   void set_motor_values(int val_1, int val_2)
