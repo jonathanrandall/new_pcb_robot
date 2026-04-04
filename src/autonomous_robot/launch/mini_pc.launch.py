@@ -28,11 +28,12 @@ def prepend_namespace_to_yaml(namespace, yaml_path):
 
 def generate_launch_description():
 
+    # Configuration variables
+    package_name = 'autonomous_robot'  #<--- CHANGE ME
+    namespace = 'arm'  #<--- CHANGE ME TO USE A DIFFERENT NAMESPACE
 
     # Include the robot_state_publisher launch file, provided by our own package. Force sim time to be enabled
     # !!! MAKE SURE YOU SET THE PACKAGE NAME CORRECTLY !!!
-
-    package_name='autonomous_robot' #<--- CHANGE ME
 
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
@@ -52,15 +53,15 @@ def generate_launch_description():
             package="twist_mux",
             executable="twist_mux",
             parameters=[twist_mux_params],
-            remappings=[('/cmd_vel_out','/arm/diff_cont/cmd_vel_unstamped')]
+            remappings=[('/cmd_vel_out', f'/{namespace}/diff_cont/cmd_vel_unstamped')]
         )
 
     # Override the twist_stamper from joystick.launch.py with correct namespace
     twist_stamper = Node(
             package='twist_stamper',
             executable='twist_stamper',
-            remappings=[('/cmd_vel_in','/arm/diff_cont/cmd_vel_unstamped'),
-                        ('/cmd_vel_out','/arm/diff_cont/cmd_vel')]
+            remappings=[('/cmd_vel_in', f'/{namespace}/diff_cont/cmd_vel_unstamped'),
+                        ('/cmd_vel_out', f'/{namespace}/diff_cont/cmd_vel')]
          )
 
     xacro_file = PathJoinSubstitution([
@@ -83,16 +84,15 @@ def generate_launch_description():
 
     controller_params_file = os.path.join(get_package_share_directory(package_name),'config','my_controllers.yaml')
 
-    namespace = "arm"
     namespaced_yaml = prepend_namespace_to_yaml(namespace, controller_params_file)
 
     controller_manager = Node(
         package="controller_manager",
         executable="ros2_control_node",
-        namespace="arm",
+        namespace=namespace,
         parameters=[robot_description,
                     namespaced_yaml],
-        remappings=[('/arm/robot_description', '/robot_description')],
+        remappings=[(f'/{namespace}/robot_description', '/robot_description')],
         output="screen",
     )
 
@@ -101,7 +101,7 @@ def generate_launch_description():
     diff_drive_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["diff_cont", "--controller-manager", "/arm/controller_manager"],
+        arguments=["diff_cont", "--controller-manager", f"/{namespace}/controller_manager"],
     )
 
     delayed_diff_drive_spawner = RegisterEventHandler(
@@ -114,7 +114,7 @@ def generate_launch_description():
     joint_broad_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["joint_broad", "--controller-manager", "/arm/controller_manager"],
+        arguments=["joint_broad", "--controller-manager", f"/{namespace}/controller_manager"],
     )
 
     delayed_joint_broad_spawner = RegisterEventHandler(
@@ -127,7 +127,7 @@ def generate_launch_description():
     hiwonder_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["hiwonder_xarm_controller", "--controller-manager", "/arm/controller_manager"],
+        arguments=["hiwonder_xarm_controller", "--controller-manager", f"/{namespace}/controller_manager"],
     )
 
     delayed_hiwonder_controller_spawner = RegisterEventHandler(
