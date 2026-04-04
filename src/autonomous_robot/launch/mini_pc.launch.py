@@ -47,6 +47,28 @@ def generate_launch_description():
                 )])
     )
 
+        # Joy button bridge configuration
+    joy_button_config = PathJoinSubstitution([
+        FindPackageShare('esp32_combined_hardware'),
+        'config',
+        'joy_button_mappings.yaml'
+    ])
+
+    # Include pan_tilt.joy launch file
+    pan_tilt_joy_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            PathJoinSubstitution([
+                FindPackageShare('pan_tilt_description'),
+                'launch',
+                'pan_tilt.joy.launch.py'
+            ])
+        ]),
+        launch_arguments={
+            'namespace': namespace,
+            'use_sim_time': 'false'
+        }.items()
+    )
+
 
     twist_mux_params = os.path.join(get_package_share_directory(package_name),'config','twist_mux.yaml')
     twist_mux = Node(
@@ -124,35 +146,9 @@ def generate_launch_description():
         )
     )
 
-    hiwonder_controller_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["hiwonder_xarm_controller", "--controller-manager", f"/{namespace}/controller_manager"],
-    )
+    
 
-    delayed_hiwonder_controller_spawner = RegisterEventHandler(
-        event_handler=OnProcessStart(
-            target_action=controller_manager,
-            on_start=[hiwonder_controller_spawner],
-        )
-    )
-
-
-    # Code for delaying a node (I haven't tested how effective it is)
-    # 
-    # First add the below lines to imports
-    # from launch.actions import RegisterEventHandler
-    # from launch.event_handlers import OnProcessExit
-    #
-    # Then add the following below the current diff_drive_spawner
-    # delayed_diff_drive_spawner = RegisterEventHandler(
-    #     event_handler=OnProcessExit(
-    #         target_action=spawn_entity,
-    #         on_exit=[diff_drive_spawner],
-    #     )
-    # )
-    #
-    # Replace the diff_drive_spawner in the final return with delayed_diff_drive_spawner
+   
 
 
 
@@ -160,10 +156,10 @@ def generate_launch_description():
     return LaunchDescription([
         rsp,
         joystick,
+        pan_tilt_joy_launch,
         twist_mux,
         twist_stamper,
         delayed_controller_manager,
         delayed_diff_drive_spawner,
         delayed_joint_broad_spawner,
-        # delayed_hiwonder_controller_spawner,
     ])

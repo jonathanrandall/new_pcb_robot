@@ -14,14 +14,21 @@ def generate_launch_description():
 
     # Package directories
     pkg_pan_tilt_description = get_package_share_directory('pan_tilt_description')
-    
+
 
     # Paths
-    
+
     teleop_config = os.path.join(pkg_pan_tilt_description, 'config', 'pan_tilt_teleop.yaml')
 
     # Process the URDF
-    
+
+
+    # Declare namespace argument
+    namespace_arg = DeclareLaunchArgument(
+        'namespace',
+        default_value='pi',
+        description='Namespace for the pan tilt controller'
+    )
 
     use_sim_time_arg = DeclareLaunchArgument(
         'use_sim_time',
@@ -31,7 +38,7 @@ def generate_launch_description():
 
     pan_tilt_controller_topic_arg = DeclareLaunchArgument(
         'pan_tilt_controller_topic',
-        default_value='/pi/pan_tilt_controller/commands',
+        default_value=[LaunchConfiguration('namespace'), '/pan_tilt_controller/commands'],
         description='Topic for pan tilt controller commands'
     )
 
@@ -63,10 +70,9 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-
+        namespace_arg,
         use_sim_time_arg,
         pan_tilt_controller_topic_arg,
         joy_node,
-
         pan_tilt_teleop
     ])
