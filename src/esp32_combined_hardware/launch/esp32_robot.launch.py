@@ -25,6 +25,13 @@ def generate_launch_description():
         'controllers.yaml'
     ])
 
+    # Joy button bridge configuration
+    joy_button_config = PathJoinSubstitution([
+        FindPackageShare('esp32_combined_hardware'),
+        'config',
+        'joy_button_mappings.yaml'
+    ])
+
     # Robot state publisher
     robot_state_publisher = Node(
         package='robot_state_publisher',
@@ -74,6 +81,7 @@ def generate_launch_description():
     joy_button_bridge = Node(
         package='esp32_combined_hardware',
         executable='joy_button_bridge',
+        parameters=[joy_button_config],
         output='screen'
     )
 

@@ -27,22 +27,79 @@ public:
     // Initialize button states (assume 10 buttons max)
     previous_button_states_.resize(10, 0);
 
-    // Define button mappings
-    // Button index -> command string
-    button_commands_[0] = "center_pan_tilt,0";  // Button A
-    button_commands_[1] = "toggle_led,1";       // Button B
-    button_commands_[2] = "estop,1";            // Button X
-    button_commands_[3] = "beep,1";             // Button Y
+    // Declare and read button mappings parameter
+    this->declare_parameter("button_mappings", std::map<int64_t, std::string>{});
+
+    // Load button mappings from parameters
+    load_button_mappings();
 
     RCLCPP_INFO(this->get_logger(), "Joy button bridge node started");
-    RCLCPP_INFO(this->get_logger(), "Button mappings:");
-    RCLCPP_INFO(this->get_logger(), "  Button 0 (A) -> center_pan_tilt,0");
-    RCLCPP_INFO(this->get_logger(), "  Button 1 (B) -> toggle_led,1");
-    RCLCPP_INFO(this->get_logger(), "  Button 2 (X) -> estop,1");
-    RCLCPP_INFO(this->get_logger(), "  Button 3 (Y) -> beep,1");
+    RCLCPP_INFO(this->get_logger(), "Loaded %zu button mappings:", button_commands_.size());
+
+    // Log all loaded button mappings
+    for (const auto & [button, command] : button_commands_)
+    {
+      RCLCPP_INFO(this->get_logger(), "  Button %zu -> %s", button, command.c_str());
+    }
+
+    if (button_commands_.empty())
+    {
+      RCLCPP_WARN(this->get_logger(), "No button mappings loaded! Check your configuration file.");
+    }
   }
 
 private:
+  void load_button_mappings()
+  {
+    // ROS 2 stores nested parameters as flattened names with dots
+    // button_mappings.0, button_mappings.1, etc.
+
+    bool found_any = false;
+
+    // Try to load button mappings for indices 0-15 (covers most controllers)
+    for (int i = 0; i < 16; i++)
+    {
+      std::string param_name = "button_mappings." + std::to_string(i);
+
+      try
+      {
+        if (this->has_parameter(param_name))
+        {
+          std::string command = this->get_parameter(param_name).as_string();
+          button_commands_[i] = command;
+          found_any = true;
+        }
+        else
+        {
+          // Try to declare and get the parameter
+          this->declare_parameter(param_name, "");
+          std::string command = this->get_parameter(param_name).as_string();
+
+          if (!command.empty())
+          {
+            button_commands_[i] = command;
+            found_any = true;
+          }
+        }
+      }
+      catch (const std::exception & e)
+      {
+        // Parameter doesn't exist or couldn't be read, skip it
+        continue;
+      }
+    }
+
+    // If no mappings were found, use defaults
+    if (!found_any)
+    {
+      RCLCPP_WARN(this->get_logger(), "No button_mappings found in parameters, using default mappings");
+      button_commands_[0] = "center_pan_tilt,0";  // Button A
+      button_commands_[1] = "toggle_led,1";       // Button B
+      button_commands_[2] = "estop,1";            // Button X
+      button_commands_[3] = "beep,1";             // Button Y
+    }
+  }
+
   void joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
   {
     // Ensure we have enough space for all buttons
