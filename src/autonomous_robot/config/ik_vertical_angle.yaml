@@ -1,3 +1,0 @@
-ik_vertical_angle_node:
-  ros__parameters:
-    vertical_angle: -0.785398  # -45 degrees in radians

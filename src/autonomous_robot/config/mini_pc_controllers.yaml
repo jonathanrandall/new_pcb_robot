@@ -10,9 +10,6 @@ arm:
       joint_broad:
         type: joint_state_broadcaster/JointStateBroadcaster
 
-      hiwonder_xarm_controller:
-        type: joint_trajectory_controller/JointTrajectoryController
-
       pan_tilt_controller:
         type: forward_command_controller/ForwardCommandController
 
@@ -27,31 +24,6 @@ arm:
       right_wheel_names: ['right_front_wheel_joint','right_rear_wheel_joint']
       wheel_separation: 0.297
       wheel_radius: 0.072
-
-  hiwonder_xarm_controller:
-    ros__parameters:
-      joints:
-        - xarm_1_joint
-        - xarm_2_joint
-        - xarm_3_joint
-        - xarm_4_joint
-        - xarm_5_joint
-        - xarm_6_joint
-
-      command_interfaces:
-        - position
-
-      state_interfaces:
-        - position
-        - velocity
-
-      state_publish_rate: 50.0
-      action_monitor_rate: 20.0
-      allow_partial_joints_goal: false
-      open_loop_control: true
-      constraints:
-        stopped_velocity_tolerance: 0.01
-        goal_time: 0.0
 
   pan_tilt_controller:
     ros__parameters:
