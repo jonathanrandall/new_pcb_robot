@@ -47,7 +47,7 @@ def generate_launch_description():
                 )])
     )
 
-        # Joy button bridge configuration
+    # Joy button bridge configuration
     joy_button_config = PathJoinSubstitution([
         FindPackageShare('esp32_combined_hardware'),
         'config',
