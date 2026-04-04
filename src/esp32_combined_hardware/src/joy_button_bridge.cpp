@@ -89,14 +89,12 @@ private:
       }
     }
 
-    // If no mappings were found, use defaults
+    // If no mappings were found, leave button_commands_ empty
     if (!found_any)
     {
-      RCLCPP_WARN(this->get_logger(), "No button_mappings found in parameters, using default mappings");
-      button_commands_[0] = "center_pan_tilt,0";  // Button A
-      button_commands_[1] = "toggle_led,1";       // Button B
-      button_commands_[2] = "estop,1";            // Button X
-      button_commands_[3] = "beep,1";             // Button Y
+      RCLCPP_WARN(this->get_logger(), "No button_mappings found in parameters. No buttons will be mapped.");
+      RCLCPP_WARN(this->get_logger(), "Please provide button mappings in the configuration file.");
+      // button_commands_ remains empty - no default mappings
     }
   }
 

@@ -146,6 +146,20 @@ def generate_launch_description():
         )
     )
 
+    pan_tilt_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["pan_tilt_controller", "--controller-manager", f"/{namespace}/controller_manager"],
+    )
+
+    delayed_pan_tilt_controller_spawner = RegisterEventHandler(
+        event_handler=OnProcessStart(
+            target_action=controller_manager,
+            on_start=[pan_tilt_controller_spawner],
+        )
+    )  
+
+
     
 
    
@@ -162,4 +176,6 @@ def generate_launch_description():
         delayed_controller_manager,
         delayed_diff_drive_spawner,
         delayed_joint_broad_spawner,
+        delayed_pan_tilt_controller_spawner
+
     ])
