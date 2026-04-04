@@ -174,8 +174,8 @@ def generate_launch_description():
         twist_mux,
         twist_stamper,
         delayed_controller_manager,
-        delayed_diff_drive_spawner,
         delayed_joint_broad_spawner,
+        delayed_diff_drive_spawner,
         delayed_pan_tilt_controller_spawner
 
     ])
