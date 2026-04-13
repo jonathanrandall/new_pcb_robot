@@ -27,9 +27,6 @@ public:
     // Initialize button states (assume 10 buttons max)
     previous_button_states_.resize(10, 0);
 
-    // Declare and read button mappings parameter
-    this->declare_parameter("button_mappings", std::map<int64_t, std::string>{});
-
     // Load button mappings from parameters
     load_button_mappings();
 

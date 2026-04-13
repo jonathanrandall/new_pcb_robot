@@ -20,6 +20,11 @@ from launch_ros.actions import Node
 def prepend_namespace_to_yaml(namespace, yaml_path):
     with open(yaml_path, 'r') as f:
         data = yaml.safe_load(f)
+
+    # If namespace is empty, return original file path
+    if not namespace:
+        return yaml_path
+
     namespaced = {namespace: data}
     tmp = NamedTemporaryFile(mode='w', delete=False, suffix='.yaml')
     yaml.dump(namespaced, tmp)
@@ -31,7 +36,7 @@ def generate_launch_description():
 
     # Configuration variables
     package_name = 'autonomous_robot'
-    namespace = 'arm'  #<--- CHANGE ME TO USE A DIFFERENT NAMESPACE
+    namespace = ''  #<--- CHANGE ME TO USE A DIFFERENT NAMESPACE
 
     # Declare launch arguments
     rviz_arg = DeclareLaunchArgument(
@@ -95,11 +100,15 @@ def generate_launch_description():
 
     # Twist mux for prioritizing cmd_vel sources
     twist_mux_params = os.path.join(get_package_share_directory(package_name), 'config', 'twist_mux.yaml')
+    # Build topic paths that handle empty namespace
+    diff_cont_cmd_vel_unstamped = f'/{namespace}/diff_cont/cmd_vel_unstamped' if namespace else '/diff_cont/cmd_vel_unstamped'
+    diff_cont_cmd_vel = f'/{namespace}/diff_cont/cmd_vel' if namespace else '/diff_cont/cmd_vel'
+
     twist_mux = Node(
         package="twist_mux",
         executable="twist_mux",
         parameters=[twist_mux_params, {'use_sim_time': True}],
-        remappings=[('/cmd_vel_out', f'/{namespace}/diff_cont/cmd_vel_unstamped')]
+        remappings=[('/cmd_vel_out', diff_cont_cmd_vel_unstamped)]
     )
 
     # Twist stamper (note: joystick.launch.py also has one, may cause conflicts)
@@ -107,8 +116,8 @@ def generate_launch_description():
         package='twist_stamper',
         executable='twist_stamper',
         parameters=[{'use_sim_time': True}],
-        remappings=[('/cmd_vel_in', f'/{namespace}/diff_cont/cmd_vel_unstamped'),
-                    ('/cmd_vel_out', f'/{namespace}/diff_cont/cmd_vel')]
+        remappings=[('/cmd_vel_in', diff_cont_cmd_vel_unstamped),
+                    ('/cmd_vel_out', diff_cont_cmd_vel)]
     )
 
     # Robot description with sim_mode=true
@@ -148,62 +157,37 @@ def generate_launch_description():
         output='screen'
     )
 
-    # Controller manager (with namespace)
-    controller_manager = Node(
-        package="controller_manager",
-        executable="ros2_control_node",
-        namespace=namespace,
-        parameters=[robot_description,
-                    namespaced_yaml,
-                    {'use_sim_time': True}],
-        remappings=[(f'/{namespace}/robot_description', '/robot_description')],
-        output="screen",
-    )
+    # Controller manager path (Gazebo creates its own controller_manager in sim mode)
+    # Build controller manager path that handles empty namespace
+    controller_manager_path = f'/{namespace}/controller_manager' if namespace else '/controller_manager'
 
-    # Delay controller manager start
-    delayed_controller_manager = TimerAction(period=3.0, actions=[controller_manager])
+    # NOTE: In sim mode, we don't launch ros2_control_node because Gazebo's
+    # ros2_control plugin creates its own controller_manager automatically.
+    # We just need to spawn the controllers to connect to it.
 
-    # Spawn diff_drive controller
+    # Spawn diff_drive controller (delayed to allow Gazebo controller_manager to start)
     diff_drive_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["diff_cont", "--controller-manager", f"/{namespace}/controller_manager"],
+        arguments=["diff_cont", "--controller-manager", controller_manager_path],
     )
+    delayed_diff_drive_spawner = TimerAction(period=5.0, actions=[diff_drive_spawner])
 
-    delayed_diff_drive_spawner = RegisterEventHandler(
-        event_handler=OnProcessStart(
-            target_action=controller_manager,
-            on_start=[diff_drive_spawner],
-        )
-    )
-
-    # Spawn joint_state_broadcaster
+    # Spawn joint_state_broadcaster (delayed to allow Gazebo controller_manager to start)
     joint_broad_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["joint_broad", "--controller-manager", f"/{namespace}/controller_manager"],
+        arguments=["joint_state_broadcaster", "--controller-manager", controller_manager_path],
     )
+    delayed_joint_broad_spawner = TimerAction(period=5.0, actions=[joint_broad_spawner])
 
-    delayed_joint_broad_spawner = RegisterEventHandler(
-        event_handler=OnProcessStart(
-            target_action=controller_manager,
-            on_start=[joint_broad_spawner],
-        )
-    )
-
-    # Spawn pan_tilt_controller
+    # Spawn pan_tilt_controller (delayed to allow Gazebo controller_manager to start)
     pan_tilt_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["pan_tilt_controller", "--controller-manager", f"/{namespace}/controller_manager"],
+        arguments=["pan_tilt_controller", "--controller-manager", controller_manager_path],
     )
-
-    delayed_pan_tilt_controller_spawner = RegisterEventHandler(
-        event_handler=OnProcessStart(
-            target_action=controller_manager,
-            on_start=[pan_tilt_controller_spawner],
-        )
-    )
+    delayed_pan_tilt_controller_spawner = TimerAction(period=5.0, actions=[pan_tilt_controller_spawner])
 
     # Gazebo-ROS bridge for sensors
     bridge_params = os.path.join(get_package_share_directory(package_name), 'config', 'gz_bridge.yaml')
@@ -248,7 +232,6 @@ def generate_launch_description():
         twist_stamper,
         gazebo,
         spawn_entity,
-        delayed_controller_manager,
         delayed_diff_drive_spawner,
         delayed_joint_broad_spawner,
         delayed_pan_tilt_controller_spawner,

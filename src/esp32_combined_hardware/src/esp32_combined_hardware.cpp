@@ -272,6 +272,10 @@ hardware_interface::return_type ESP32CombinedHardware::read(
   {
     serial_conn_.FlushIOBuffers();
 
+    // Request state from ESP32
+    serial_conn_.Write("GET\n");
+    std::this_thread::sleep_for(std::chrono::milliseconds(1));
+
     std::string response;
     serial_conn_.ReadLine(response, '\n', timeout_ms_);
 
