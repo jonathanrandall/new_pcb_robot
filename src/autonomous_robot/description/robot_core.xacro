@@ -3,6 +3,8 @@
 
     <xacro:include filename="inertial_macros.xacro"/>
 
+    <!-- <xacro:include filename="$(dirname)/inertial_macros.xacro"/> -->
+
 
     <xacro:property name="chassis_length" value="0.335"/>
     <xacro:property name="chassis_width" value="0.265"/>
