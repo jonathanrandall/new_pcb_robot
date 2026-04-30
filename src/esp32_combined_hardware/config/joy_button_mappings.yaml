@@ -19,5 +19,5 @@ joy_button_bridge:
     button_mappings:
       0: "center_pan_tilt,0"    # Button A - Center pan/tilt servos
       1: "toggle_led,1"          # Button B - Toggle LED
-      2: "estop,1"               # Button X - Emergency stop
-      3: "beep,1"                # Button Y - Beep
+      3: "estop,1"               # Button X - Emergency stop
+      4: "fire"                # Button Y - fire weapon (no argument)

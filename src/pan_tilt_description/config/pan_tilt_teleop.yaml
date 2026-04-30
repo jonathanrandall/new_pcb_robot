@@ -13,10 +13,10 @@ pan_tilt_teleop:
 
     pan_min: -1.57     # -90 degrees
     pan_max: 1.57      # 90 degrees
-    tilt_min: -1.5     # - ~30 degrees
-    tilt_max: 1.5      # + ~30 degrees
+    tilt_min: -1.5     # - ~86 degrees
+    tilt_max: 0.87     # +50 degrees (up limit)
 
-    pan_speed: 0.05    # Radians per update when joystick is at full deflection
-    tilt_speed: 0.05   # Radians per update when joystick is at full deflection
+    pan_speed: 0.02    # Radians per update when joystick is at full deflection
+    tilt_speed: 0.02   # Radians per update when joystick is at full deflection
 
     publish_rate: 30.0 # Hz

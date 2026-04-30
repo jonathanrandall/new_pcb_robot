@@ -161,6 +161,13 @@ def generate_launch_description():
 
 
 
+    joy_button_bridge = Node(
+        package='esp32_combined_hardware',
+        executable='joy_button_bridge',
+        parameters=[joy_button_config],
+        output='screen',
+    )
+
     # Launch them all!
     return LaunchDescription([
         rsp,
@@ -171,6 +178,6 @@ def generate_launch_description():
         delayed_controller_manager,
         delayed_joint_broad_spawner,
         delayed_diff_drive_spawner,
-        delayed_pan_tilt_controller_spawner
-
+        delayed_pan_tilt_controller_spawner,
+        joy_button_bridge,
     ])
